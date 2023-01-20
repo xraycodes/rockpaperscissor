@@ -1,23 +1,23 @@
+    //must return rock paper or scissors(3 options)
 function getComputerChoice() {
-    //must return rock papaer or scissors(3 options)
     choices = ['rock','paper','scissors'];
     randomSelection = Math.floor(Math.random() * 3);
     return (choices[randomSelection].toUpperCase());
     }
 
+    //asks player to put in rock paper scissors
 function getPlayerChoice(){
     playerChoiceQuestion = prompt("Rock, Paper, Scissors?: ")
     playerChoice = playerChoiceQuestion.toUpperCase();
     return playerChoice
     }
 
-function RockPaperScissors(playerSelection,computerSelection) {
     //input player selection
+function RockPaperScissors(playerSelection,computerSelection) {
     playerChoice = playerSelection
     computerChoice = computerSelection
 
-    //compare that to computer selection
-    //rock > scissors
+    //compare player choice that to computer selection
     if (playerChoice == 'ROCK' & computerSelection == 'SCISSORS'){
         return('You win, rock beats scissors!');
     }
@@ -45,14 +45,13 @@ function RockPaperScissors(playerSelection,computerSelection) {
         else if (playerChoice == 'SCISSORS' & computerSelection == 'ROCK'){
             return('You lose, rock beats scissors')
         }
-    //draw
+    //player inputs not valid choice
     else {
         return("Enter valid answer");
     }
 }
 
-    //print out winner 
-
+    //running the game 5 times
 function game(){
     for (let i = 0; i <= 4; i++) {
         finalComputerChoice = getComputerChoice();
